@@ -1,0 +1,187 @@
+{
+  "name": "ShiftVireo",
+  "primary": "Request a pilot",
+  "accent": "#5ab9fc",
+  "ink": "#e9edf3",
+  "bg": "#0a0d14",
+  "surface": "#131824",
+  "fontLink": "<link href=\"https://fonts.googleapis.com/css2?family=Geist:wght@400..700&family=Geist+Mono:wght@400..500&display=swap\" rel=\"stylesheet\">",
+  "fontDisplay": "\"Geist\", system-ui, sans-serif",
+  "fontText": "\"Geist\", system-ui, sans-serif",
+  "client": "Surulere care home, Lagos",
+  "note": "A fixed site with 34 support staff. Results here come from fixed data in your browser; no AI service is called.",
+  "tabs": {
+    "overview": "Forecast",
+    "records": "Shifts",
+    "queue": "Recommendations to approve"
+  },
+  "overview": {
+    "title": "Support workload, next week",
+    "kpis": [
+      [
+        "Support staff",
+        "34"
+      ],
+      [
+        "Shifts next week",
+        "42"
+      ],
+      [
+        "Uncovered",
+        "3"
+      ],
+      [
+        "Hours forecast",
+        "324"
+      ]
+    ],
+    "chart": {
+      "title": "Support hours forecast per day",
+      "labels": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun",
+        "Mon"
+      ],
+      "values": [
+        52,
+        47,
+        49,
+        46,
+        45,
+        38,
+        36,
+        50
+      ],
+      "threshold": 46,
+      "thresholdLabel": "Rostered 46 h",
+      "caption": "Days above the line need extra cover."
+    }
+  },
+  "records": {
+    "title": "Shifts",
+    "searchHint": "Role or staff name",
+    "statusCol": 3,
+    "columns": [
+      "Shift",
+      "Day",
+      "Need",
+      "Status",
+      "Rostered",
+      "Next step"
+    ],
+    "tones": {
+      "Gap": "bad",
+      "Overtime": "warn",
+      "Covered": "good"
+    },
+    "rows": [
+      [
+        "Admin, 09:00",
+        "Mon",
+        "2",
+        "Gap",
+        "1",
+        "Recommendation to approve"
+      ],
+      [
+        "Kitchen porter, 07:00",
+        "Wed",
+        "2",
+        "Gap",
+        "1",
+        "Recommendation to approve"
+      ],
+      [
+        "Laundry, 10:00",
+        "Sat",
+        "1",
+        "Overtime",
+        "1",
+        "Recommendation to approve"
+      ],
+      [
+        "Front desk, 07:00",
+        "Mon",
+        "2",
+        "Covered",
+        "2",
+        "None"
+      ],
+      [
+        "Housekeeping, 08:00",
+        "Tue",
+        "3",
+        "Covered",
+        "3",
+        "None"
+      ],
+      [
+        "Records clerk, 09:00",
+        "Thu",
+        "2",
+        "Covered",
+        "2",
+        "None"
+      ],
+      [
+        "Driver, 11:00",
+        "Tue",
+        "1",
+        "Covered",
+        "1",
+        "None"
+      ],
+      [
+        "Reception, 14:00",
+        "Fri",
+        "1",
+        "Covered",
+        "1",
+        "None"
+      ],
+      [
+        "Front desk, 19:00",
+        "Sun",
+        "1",
+        "Gap",
+        "0",
+        "Send to agency"
+      ]
+    ]
+  },
+  "queue": {
+    "title": "Recommendations waiting for a manager",
+    "lead": "Each recommendation names the shift, the person suggested and their hours. Nothing reaches the rota until a manager approves.",
+    "items": [
+      {
+        "id": "admin",
+        "title": "Admin, Monday 09:00: Grace Ekpo",
+        "detail": "Free on Monday, 28 of 40 hours this week.",
+        "reason": "Family visits forecast 30% above a normal Monday."
+      },
+      {
+        "id": "porter",
+        "title": "Kitchen porter, Wednesday 07:00: Musa Abdullahi",
+        "detail": "Free on Wednesday, 32 of 40 hours.",
+        "reason": "Amaka Obi is on leave Monday to Wednesday."
+      },
+      {
+        "id": "laundry",
+        "title": "Laundry, Saturday 10:00: move to Monday",
+        "detail": "Avoids overtime for Chika Nwosu.",
+        "reason": "Laundry team at 112% of contracted hours this month."
+      },
+      {
+        "id": "desk",
+        "title": "Front desk, Sunday 19:00: agency cover",
+        "detail": "No staff member free without overtime.",
+        "reason": "Two of three evening staff on leave."
+      }
+    ]
+  }
+}

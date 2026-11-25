@@ -1,0 +1,11 @@
+{
+ "page": "dist/index.html",
+ "dir": "/home/user/shiftvireo",
+ "kind": "software",
+ "start": "2026-11-25T02:47:43.729Z",
+ "by": "start.mjs",
+ "url": null,
+ "root": "dist",
+ "category": "care staff scheduling software",
+ "primary": "Request a pilot"
+}

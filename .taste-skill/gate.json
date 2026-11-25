@@ -1,0 +1,705 @@
+{
+ "start": "2026-11-25T02:47:43.729Z",
+ "round": 3,
+ "idle": 0,
+ "errors": 0,
+ "status": "open",
+ "history": [
+  {
+   "at": "2026-11-25T02:50:58.673Z",
+   "mode": "manual",
+   "status": "fail",
+   "fails": 7,
+   "round": 1,
+   "reused": false,
+   "stopHookActive": false
+  },
+  {
+   "at": "2026-11-25T02:53:25.167Z",
+   "mode": "manual",
+   "status": "fail",
+   "fails": 7,
+   "round": 2,
+   "reused": false,
+   "stopHookActive": false
+  },
+  {
+   "at": "2026-11-25T07:53:55.765Z",
+   "mode": "manual",
+   "status": "open",
+   "fails": 7,
+   "round": 3,
+   "reused": false,
+   "stopHookActive": false
+  }
+ ],
+ "max": 3,
+ "marker": {
+  "page": "dist/index.html",
+  "dir": "/home/user/shiftvireo",
+  "kind": "software",
+  "start": "2026-11-25T02:47:43.729Z",
+  "by": "start.mjs",
+  "url": null,
+  "root": "dist",
+  "category": "care staff scheduling software",
+  "primary": "Request a pilot"
+ },
+ "manual": true,
+ "roundKey": "1d1f820d58d9e7ce:da39a3ee",
+ "roundFree": false,
+ "idleFree": false,
+ "blockKey": null,
+ "fp": "1d1f820d58d9e7ce",
+ "page": "dist/index.html",
+ "found": {
+  "fails": [
+   {
+    "check": "copy-headings",
+    "where": "div.mo-pc__text > ol.mo-pc__steps > li.mo-pc__step:nth-of-type(2) > h3 \"Read the workload forecast\"",
+    "msg": "\"Read the workload forecast\" names no product, part, place or section (9 headings like it; at most one brand line per page) (and 8 more like it: \"Approve the recommended \", \"Abubakar Sadiq\", \"Tolani Ogundipe\", \"Does it publish rotas by\", ...)",
+    "fix": "name the thing in every heading: the product, a part, the place or a section noun",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "copy-headings"
+    ],
+    "wheres": [
+     "div.mo-pc__text > ol.mo-pc__steps > li.mo-pc__step:nth-of-type(2) > h3 \"Read the workload forecast\""
+    ]
+   },
+   {
+    "check": "section-gaps",
+    "where": "section#faq / section#pilot",
+    "msg": "398px between these sections, +111% against the median 189px",
+    "fix": "use one gap between sections (all within 25% of each other)",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "section-gaps"
+    ],
+    "wheres": [
+     "section#faq / section#pilot"
+    ]
+   },
+   {
+    "check": "section-gaps",
+    "where": "section#pilot / footer#contact",
+    "msg": "419px between these sections, +122% against the median 189px",
+    "fix": "use one gap between sections (all within 25% of each other)",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "section-gaps"
+    ],
+    "wheres": [
+     "section#pilot / footer#contact"
+    ]
+   },
+   {
+    "check": "one-section",
+    "where": "section.hero.hero--centred > div.wrap > div.hero-text > div.hero__window \"ShiftVireo · Surulere care homeOverviewF\"",
+    "msg": "a band: a box 89% of the section wide on a ground of its own that holds only text: the section's own ground is the band (SR-4)",
+    "fix": "put every block of <main> in a <section>, and give a band its own section instead of a ground inside one",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "one-section"
+    ],
+    "wheres": [
+     "section.hero.hero--centred > div.wrap > div.hero-text > div.hero__window \"ShiftVireo · Surulere care homeOverviewF\""
+    ]
+   },
+   {
+    "check": "cut-text",
+    "where": "div.d-rows > div.d-row:nth-of-type(4) > div > b \"Porter, Wed\"",
+    "msg": "cut 12px at the bottom by the overflow of section.hero.hero--centred > div.wrap > div.hero-text > div.hero__window (and 1 more like it: \"Gap\")",
+    "fix": "give the text room: no overflow clipping a line, no line past its box",
+    "widths": [
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "cut-text"
+    ],
+    "wheres": [
+     "div.d-rows > div.d-row:nth-of-type(4) > div > b \"Porter, Wed\""
+    ]
+   },
+   {
+    "check": "off-viewport",
+    "where": "header.nav > div.wrap.nav__bar > button.nav__toggle",
+    "msg": "at 320px wide it runs 4px past the screen's right edge (cut there: the page clips what runs past it)",
+    "fix": "keep it inside the screen at this width: let it shrink, wrap or stack",
+    "widths": [
+     320
+    ],
+    "from": "consistency",
+    "ids": [
+     "off-viewport"
+    ],
+    "wheres": [
+     "header.nav > div.wrap.nav__bar > button.nav__toggle"
+    ]
+   },
+   {
+    "check": "neighbour",
+    "where": "#how section.section \"How a ShiftVireo pilot runs Send\"",
+    "msg": "framed, 66px of #platform section.section.ground-inverse \"ShiftVireo’s scheduling platform\" shows",
+    "fix": "keep the next section's heading and picture out of this screen",
+    "widths": [
+     390
+    ],
+    "from": "layout",
+    "ids": [
+     "neighbour"
+    ],
+    "wheres": [
+     "#how section.section \"How a ShiftVireo pilot runs Send\""
+    ]
+   }
+  ],
+  "warns": [
+   {
+    "check": "scroll-reveal",
+    "where": "section#how \"How a ShiftVireo pilot runs Send shift r\"",
+    "msg": "starts \"border-left-color\" (0.3 s) the moment it is scrolled into view (an IntersectionObserver) on li.mo-pc__step:nth-of-type(1) (inside a dealt moment's section, [data-moment]: an enter moment is expected on every kind; its still is judged under reduced motion)",
+    "fix": "show it at rest: no fade, rise or unmask when it is scrolled into view",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "pinned",
+    "where": "section#how > div.wrap.mo-pc__grid \"How a ShiftVireo pilot runs Send shift r\"",
+    "msg": "held on screen for 1 screen of scroll (position: sticky) while the page moves on (inside a dealt moment's section, [data-moment]: expected on every kind, two moments at most, house rule; its still is judged under reduced motion)",
+    "fix": "let the section scroll with the page",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "no-visual",
+    "where": "section#pilot \"Request a pilot\"",
+    "msg": "pictures, effects and mocks cover 23% of this section; a feature section needs a visual (about 25% or more)",
+    "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "text-only",
+    "where": "section#faq \"Questions\"",
+    "msg": "the section is only text: no picture, icon, mock or effect in it",
+    "fix": "give the section a visual: a photograph that fits, the real icons, or a UI fragment on a ground",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "dark-ground",
+    "where": "section#how > div.wrap.mo-pc__grid > div.mo-pc__visuals.frame",
+    "msg": "the ground behind the UI is only 1.1:1 lighter than its card (1.0% against 0.4% luminance; needs 3:1) (inside a held section or scroll scene, whose motion --quick does not check)",
+    "fix": "light the ground behind the UI (a daylight data-fx-palette): at least 3:1 against the card",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "cta",
+    "where": "section#features \"Four scheduling tools for care managers.\"",
+    "msg": "a section over 1.5 screens long with no link or button in it",
+    "fix": "add the action: a button in the hero, one on every priced item, one in the closing section",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "cta",
+    "where": "section#how \"How a ShiftVireo pilot runs\"",
+    "msg": "a section over 1.5 screens long with no link or button in it",
+    "fix": "add the action: a button in the hero, one on every priced item, one in the closing section",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "text-contrast",
+    "where": "div.ui-cal__events > div.ui-cal__ev:nth-of-type(2) > span.ui-cal__date > i \"Dec\"",
+    "msg": "37 lines of text in drawn mocks read under 4.5:1 (15 colour pairs), the worst \"Dec\" in #434853 on #0a0d14 at 2.13:1",
+    "fix": "lift the mocks' muted text (labels, meta, initials) to 4.5:1 on their own panel, or set it larger",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "section-gaps",
+    "where": "section#how / section#platform",
+    "msg": "uneven space at the edge of a band: 179px outside its edge, 115px inside it (the space on either side of a change of ground reads as one gap only when the two match)",
+    "fix": "use one gap between sections (all within 25% of each other)",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "section-gaps",
+    "where": "section#platform / section#team",
+    "msg": "uneven space at the edge of a band: 115px outside its edge, 215px inside it (the space on either side of a change of ground reads as one gap only when the two match)",
+    "fix": "use one gap between sections (all within 25% of each other)",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "proximity",
+    "where": "div.wrap > div.grid.fill > article.card.card--row:nth-of-type(1) > h3 \"Abubakar Sadiq\"",
+    "msg": "touches the picture or panel above it (1px) (and 1 more like it: \"Tolani Ogundipe\")",
+    "fix": "leave 8px or more between a picture and its caption, and more between rows than inside a row",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "nav-labels",
+    "where": "header.nav > div.wrap.nav__bar > a.nav__logo \"ShiftVireo\"",
+    "msg": "\"ShiftVireo\" opens a section headed \"Shift planning for care homes\"",
+    "fix": "name each nav link after the heading of the section it opens",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "nav-labels",
+    "where": "div.wrap.nav__bar > nav.nav__links > div.nav__item:nth-of-type(1) > a.nav__link \"Product\"",
+    "msg": "\"Product\" opens a section headed \"Every support shift and staffing gap in one window\"",
+    "fix": "name each nav link after the heading of the section it opens",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "nav-labels",
+    "where": "div.nav__item:nth-of-type(1) > div.nav__menu > div.wrap.grid > a.menu-card.span-4:nth-of-type(1) \"Admin, MondaynowForecast 2 staff, 1 rost\"",
+    "msg": "\"Admin, MondaynowForecast 2 staff, 1 rost\" opens a section headed \"Every support shift and staffing gap in one window\"",
+    "fix": "name each nav link after the heading of the section it opens",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "nav-labels",
+    "where": "div.nav__item:nth-of-type(1) > div.nav__menu > div.wrap.grid > a.menu-card.span-4:nth-of-type(3) \"HGRota approved1hSurulere, by Halima Gar\"",
+    "msg": "\"HGRota approved1hSurulere, by Halima Gar\" opens a section headed \"How a ShiftVireo pilot runs\"",
+    "fix": "name each nav link after the heading of the section it opens",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "nav-labels",
+    "where": "div.wrap.nav__bar > nav.nav__links > div.nav__item:nth-of-type(2) > a.nav__link \"Features\"",
+    "msg": "\"Features\" opens a section headed \"Four scheduling tools for care managers. Managers \"",
+    "fix": "name each nav link after the heading of the section it opens",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "nav-labels",
+    "where": "div.wrap.nav__bar > nav.nav__links > div.nav__item:nth-of-type(5) > a.nav__link \"Team\"",
+    "msg": "\"Team\" opens a section headed \"ShiftVireo’s founders\"",
+    "fix": "name each nav link after the heading of the section it opens",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "label-centre",
+    "where": "header.nav > div.wrap.nav__bar > div.nav__actions > a.btn.btn--primary \"Request a pilot\"",
+    "msg": "its label sits 18px off-centre (25px of room at the left, 43px at the right) (and 1 more like it: \"Request a pilot\")",
+    "fix": "centre the label in its button, or fill the empty side with an icon",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "fade-cut",
+    "where": "div.ly-piece.ly-piece--main > div.d-win__body > div.d-side > span:nth-of-type(8) \"Housekeeping\"",
+    "msg": "2 lines of div.ly-piece.ly-piece--main fade out under its edge (\"Housekeeping\", \"Forecast 3 staff\"): drawn at a fraction of #4d5257 on #ffffff, half-erased",
+    "fix": "fit the mock's rows inside its panel (fewer rows, a taller panel), or end the fade below the last whole row: no row half-erased",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "fade-cut",
+    "where": "div.ui-cal__events > div.ui-cal__ev:nth-of-type(1) > span.ui-cal__date > i \"Dec\"",
+    "msg": "a line of div.ui.ui-panel fades out under its edge (\"Dec\"): drawn at a fraction of #0a0d14 on #e9edf3, half-erased",
+    "fix": "fit the mock's rows inside its panel (fewer rows, a taller panel), or end the fade below the last whole row: no row half-erased",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "fade-cut",
+    "where": "div.ui-win__main > ul.ui-win__rows > li.ui-win__row:nth-of-type(8) > span.ui-win__sub \"Need 1 · 1 rostered\"",
+    "msg": "a line of div.ui.ui-panel fades out under its edge (\"Need 1 · 1 rostered\"): drawn at a fraction of #8891a1 on #0a0d14, half-erased",
+    "fix": "fit the mock's rows inside its panel (fewer rows, a taller panel), or end the fade below the last whole row: no row half-erased",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "copy-length",
+    "where": "h2#principle-h \"Care managers decide every rota\"",
+    "msg": "a section heading of 5 words on 4 lines at 129.6px: a paragraph set in display type",
+    "fix": "cut the heading to one short line (2 to 12 words) and move the rest into the text under it",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "copy-length",
+    "where": "section#faq \"Questions\"",
+    "msg": "1 section over 90 words a screen outside the UI mocks (\"Questions\" 98); 47 words a screen across the page (513 words in 11 screens): a tech page says it in about 80 or fewer",
+    "fix": "cut every section to its heading, one line and the product UI: the UI says the rest; no second paragraph, no list of feature sentences",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "nav-current",
+    "where": "header.nav",
+    "msg": "the nav stays on screen with 5 links to the page's sections, but never marks the one you are in (no link changes as the page scrolls)",
+    "fix": "mark the link of the section on screen (a colour, a weight or a line under it) as the visitor scrolls",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "button-contrast",
+    "where": "div.hero-text > div.hero__c > div.btn-row > a.btn.btn--secondary \"Open the demo\"",
+    "msg": "the button \"Open the demo\" (#181b22) stands only 1.13:1 off the ground around it: it reads as part of the ground, or as switched off",
+    "fix": "give the button a fill that stands at least 1.5:1 off what is around it, or an outline in the ink",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "action-count",
+    "where": "footer#contact > div.wrap > div.closing__cta.close--type > a.btn.btn--primary",
+    "msg": "the main action \"Request a pilot\" is on 5 buttons and links: the nav, the hero and the closing call carry it; elsewhere a section has its own action",
+    "fix": "the main action in the nav, the hero and the closing call; give the other sections their own action",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "visual-caption",
+    "where": "div.ui.ui-panel > div.ui-stat__chart > div.ui-stat__axis > span:nth-of-type(1) \"Mon\"",
+    "msg": "a muted 13px line of 1 row sits 8px under the drawing (svg): it reads as a caption: \"Mon\"; no caption or description under any image, render or visual (house rule)",
+    "fix": "take the line away: no caption or description under, over or on any image, render or visual; a licence credit goes in one footer line",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "empty-area",
+    "where": "section#pilot \"Request a pilot\"",
+    "msg": "44% of the section is empty: 208px under its last (div.panel.pilot-panel), 15% beside content that covers under half the container, in its 720px of rows (WARN over 35%, FAIL over 50%)",
+    "fix": "fill the section: a picture or a second column beside the words, or more of its own content; the section stays one or two screens tall (T-height)",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "action-repeat",
+    "where": "header.nav > div.wrap.nav__bar > div.nav__actions > a.btn.btn--primary:nth-of-type(2) \"request a pilot\"",
+    "msg": "\"request a pilot\" shows 2 times on the first screen at 1440px (nav, hero): the nav's button and the hero's; nothing else on the screen may repeat it",
+    "fix": "show the action once a screen besides the nav's button: the hero's, the close's or the phone bar's, never all at once",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "form-send",
+    "where": "section#pilot > div.wrap > div.grid.grid--top > form.form.span-6 \"mailto:care@shiftvireo.example\"",
+    "msg": "the form opens a mail to care@shiftvireo.example: a stand-in until the client gives its form address; list it in the report",
+    "fix": "send the form to the client's address (data-endpoint) and show the confirmation only after it answers; list a mailto stand-in in the report",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "section-air",
+    "where": "section#pilot \"Request a pilotOne site, forecast and sc\"",
+    "msg": "the content fills 53.5% of the section's height (482 of 900px): 55% or more (40% WARN) (SR-3)",
+    "fix": "fill the section to 55%: more content, a picture or a background layer, or merge it into the section above as its last block",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "container-edges",
+    "where": "div.wrap.mo-pc__grid > div.mo-pc__text > ol.mo-pc__steps > li.mo-pc__step:nth-of-type(1) \"Send shift records and the current rotaW\"",
+    "msg": "3 text blocks start on a left line at x 106, 26px from the container's left: text starts on the container's left, or on one split line (x 623, 732, 841) (also \"Read the workload forecastWithin\", \"Approve the recommended rotaYour\") (it is in a scroll scene: told as a WARN) (SR-6)",
+    "fix": "start the text on the container's left, or on the one split line every split shares",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "cut-text",
+    "where": "div.d-rows > div.d-row:nth-of-type(1) > div > b \"Front desk, Mon 07:00\"",
+    "msg": "shortened with an ellipsis (and 2 more like it: \"Admin, Mon 09:00\", \"Housekeeping, Tue 08:00\")",
+    "fix": "give the text room: no overflow clipping a line, no line past its box",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "cut-text",
+    "where": "div.ui.ui-panel > ul.ui-checks__list > li.ui-check:nth-of-type(3) > span.ui-check__label \"Grace E., days only\"",
+    "msg": "cut 15px at the bottom by the overflow of div.group > div.grid > article.card.card--row:nth-of-type(2) > div.panel: a fragment run out through its panel's edge",
+    "fix": "give the text room: no overflow clipping a line, no line past its box",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "cut-text",
+    "where": "div.ui.ui-panel > ul.ui-checks__list > li.ui-check:nth-of-type(4) > span.ui-check__label \"A monthly utilization report\"",
+    "msg": "cut 5px at the bottom by the overflow of div.wrap > div.grid.grid--top > div.span-5 > div.panel.pilot-panel: a fragment run out through its panel's edge",
+    "fix": "give the text room: no overflow clipping a line, no line past its box",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "cta",
+    "where": "section#platform \"ShiftVireo’s scheduling platform on AWS\"",
+    "msg": "a section over 1.5 screens long with no link or button in it",
+    "fix": "add the action: a button in the hero, one on every priced item, one in the closing section",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "cta",
+    "where": "section#team \"ShiftVireo’s founders\"",
+    "msg": "a section over 1.5 screens long with no link or button in it",
+    "fix": "add the action: a button in the hero, one on every priced item, one in the closing section",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "text-contrast",
+    "where": "div.ui.ui-notify > ul.ui-notify__list > li.ui-note:nth-of-type(1) > span.ui-avatar.ui-note__av \"HG\"",
+    "msg": "15 lines of text in drawn mocks read under 4.5:1 (7 colour pairs), the worst \"HG\" in #ab7e6f on #5a4948 at 2.4:1",
+    "fix": "lift the mocks' muted text (labels, meta, initials) to 4.5:1 on their own panel, or set it larger",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "section-gaps",
+    "where": "section#faq / section#pilot",
+    "msg": "184px between these sections, +29% against the median 143px",
+    "fix": "use one gap between sections (all within 25% of each other)",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "fade-cut",
+    "where": "div.ui-cal__events > div.ui-cal__ev:nth-of-type(2) > span.ui-cal__date > i \"Dec\"",
+    "msg": "2 lines of div.ui.ui-panel fade out under its edge (\"Dec\", \"Ask Musa A., available\"): drawn at a fraction of #8891a1 on #0a0d14, half-erased",
+    "fix": "fit the mock's rows inside its panel (fewer rows, a taller panel), or end the fade below the last whole row: no row half-erased",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   }
+  ],
+  "crashed": [],
+  "seconds": {
+   "consistency": 137,
+   "layout": 4
+  }
+ },
+ "open": [
+  {
+   "check": "copy-headings",
+   "where": "div.mo-pc__text > ol.mo-pc__steps > li.mo-pc__step:nth-of-type(2) > h3 \"Read the workload forecast\"",
+   "msg": "\"Read the workload forecast\" names no product, part, place or section (9 headings like it; at most one brand line per page) (and 8 more like it: \"Approve the recommended \", \"Abubakar Sadiq\", \"Tolani Ogundipe\", \"Does it publish rotas by\", ...)",
+   "fix": "name the thing in every heading: the product, a part, the place or a section noun",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "copy-headings"
+   ],
+   "wheres": [
+    "div.mo-pc__text > ol.mo-pc__steps > li.mo-pc__step:nth-of-type(2) > h3 \"Read the workload forecast\""
+   ]
+  },
+  {
+   "check": "section-gaps",
+   "where": "section#faq / section#pilot",
+   "msg": "398px between these sections, +111% against the median 189px",
+   "fix": "use one gap between sections (all within 25% of each other)",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "section-gaps"
+   ],
+   "wheres": [
+    "section#faq / section#pilot"
+   ]
+  },
+  {
+   "check": "section-gaps",
+   "where": "section#pilot / footer#contact",
+   "msg": "419px between these sections, +122% against the median 189px",
+   "fix": "use one gap between sections (all within 25% of each other)",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "section-gaps"
+   ],
+   "wheres": [
+    "section#pilot / footer#contact"
+   ]
+  },
+  {
+   "check": "one-section",
+   "where": "section.hero.hero--centred > div.wrap > div.hero-text > div.hero__window \"ShiftVireo · Surulere care homeOverviewF\"",
+   "msg": "a band: a box 89% of the section wide on a ground of its own that holds only text: the section's own ground is the band (SR-4)",
+   "fix": "put every block of <main> in a <section>, and give a band its own section instead of a ground inside one",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "one-section"
+   ],
+   "wheres": [
+    "section.hero.hero--centred > div.wrap > div.hero-text > div.hero__window \"ShiftVireo · Surulere care homeOverviewF\""
+   ]
+  },
+  {
+   "check": "cut-text",
+   "where": "div.d-rows > div.d-row:nth-of-type(4) > div > b \"Porter, Wed\"",
+   "msg": "cut 12px at the bottom by the overflow of section.hero.hero--centred > div.wrap > div.hero-text > div.hero__window (and 1 more like it: \"Gap\")",
+   "fix": "give the text room: no overflow clipping a line, no line past its box",
+   "widths": [
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "cut-text"
+   ],
+   "wheres": [
+    "div.d-rows > div.d-row:nth-of-type(4) > div > b \"Porter, Wed\""
+   ]
+  },
+  {
+   "check": "off-viewport",
+   "where": "header.nav > div.wrap.nav__bar > button.nav__toggle",
+   "msg": "at 320px wide it runs 4px past the screen's right edge (cut there: the page clips what runs past it)",
+   "fix": "keep it inside the screen at this width: let it shrink, wrap or stack",
+   "widths": [
+    320
+   ],
+   "from": "consistency",
+   "ids": [
+    "off-viewport"
+   ],
+   "wheres": [
+    "header.nav > div.wrap.nav__bar > button.nav__toggle"
+   ]
+  },
+  {
+   "check": "neighbour",
+   "where": "#how section.section \"How a ShiftVireo pilot runs Send\"",
+   "msg": "framed, 66px of #platform section.section.ground-inverse \"ShiftVireo’s scheduling platform\" shows",
+   "fix": "keep the next section's heading and picture out of this screen",
+   "widths": [
+    390
+   ],
+   "from": "layout",
+   "ids": [
+    "neighbour"
+   ],
+   "wheres": [
+    "#how section.section \"How a ShiftVireo pilot runs Send\""
+   ]
+  }
+ ],
+ "waived": [],
+ "warnCount": 40,
+ "at": "2026-11-25T07:53:55.765Z",
+ "openTold": true
+}
